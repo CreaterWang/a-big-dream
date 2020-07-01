@@ -1,9 +1,9 @@
-package java.lambda.demo;
+package javava.lambda.demo;
 
 
 
-import java.lambda.entity.User;
-import java.lambda.util.Creater;
+import javava.lambda.entity.User;
+import javava.lambda.util.Creater;
 import java.util.List;
 import java.util.stream.Collectors;
 

@@ -1,7 +1,8 @@
-package java.lambda.util;
+package javava.lambda.util;
 
 
-import java.lambda.entity.User;
+import javava.lambda.entity.User;
+
 import java.util.ArrayList;
 import java.util.List;
 

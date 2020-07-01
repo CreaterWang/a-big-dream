@@ -1,4 +1,4 @@
-package java.lambda.entity;
+package javava.lambda.entity;
 
 import lombok.Data;
 
