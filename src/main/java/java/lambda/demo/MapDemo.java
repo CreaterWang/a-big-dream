@@ -1,14 +1,15 @@
 package java.lambda.demo;
 
-import stream.common.CommonUtil;
-import stream.entity.User;
 
+
+import java.lambda.entity.User;
+import java.lambda.util.Creater;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class MapDemo {
     public static void main(String[] args) {
-        List<User> users = CommonUtil.initUsers();
+        List<User> users = Creater.initUsers();
 
         /**
          * 取出所有用户的名字并去重

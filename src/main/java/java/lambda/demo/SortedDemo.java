@@ -1,15 +1,15 @@
 package java.lambda.demo;
 
-import stream.common.CommonUtil;
-import stream.entity.User;
 
+import java.lambda.entity.User;
+import java.lambda.util.Creater;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class SortedDemo {
     public static void main(String[] args) {
-        List<User> users = CommonUtil.initUsers();
+        List<User> users = Creater.initUsers();
 
         //找出以wang开头的用户，并年龄倒叙排序
         List<User> list = users.stream()
