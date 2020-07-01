@@ -1,4 +1,4 @@
-package javava.concurrency;
+package javava.concurrency.volatileee;
 
 /**
  * volatile变量
