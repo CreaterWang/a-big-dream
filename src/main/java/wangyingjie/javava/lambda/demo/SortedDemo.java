@@ -1,8 +1,8 @@
-package javava.lambda.demo;
+package wangyingjie.javava.lambda.demo;
 
 
-import javava.lambda.entity.User;
-import javava.lambda.util.Creater;
+import wangyingjie.javava.lambda.entity.User;
+import wangyingjie.javava.lambda.util.Creater;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;

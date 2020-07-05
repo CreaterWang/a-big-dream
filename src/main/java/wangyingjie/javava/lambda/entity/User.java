@@ -1,4 +1,4 @@
-package javava.lambda.entity;
+package wangyingjie.javava.lambda.entity;
 
 import lombok.Data;
 

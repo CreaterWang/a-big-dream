@@ -1,4 +1,4 @@
-package leetcode;
+package wangyingjie.leetcode;
 
 /**
  * 两数相加

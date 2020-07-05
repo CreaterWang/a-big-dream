@@ -1,4 +1,4 @@
-package javava.lambda.demo;
+package wangyingjie.javava.lambda.demo;
 
 import java.util.Arrays;
 import java.util.List;
