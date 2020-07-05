@@ -59,7 +59,7 @@ public class LeetCode3 {
     public static int lengthOfLongestSubstring(String s) {
         int max = 0;
         Map<Character, Integer> charMap = new HashMap<>();
-        int maxIndex = -1;
+        int maxIndex = -1;//就是为了 字符-字符直接得出最大字符串长度
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (charMap.containsKey(c) && charMap.get(c) > maxIndex){
