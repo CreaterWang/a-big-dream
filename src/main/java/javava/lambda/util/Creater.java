@@ -1,7 +1,7 @@
-package wangyingjie.javava.lambda.util;
+package javava.lambda.util;
 
 
-import wangyingjie.javava.lambda.entity.User;
+import javava.lambda.entity.User;
 
 import java.util.ArrayList;
 import java.util.List;

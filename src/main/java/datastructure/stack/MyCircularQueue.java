@@ -1,4 +1,4 @@
-package wangyingjie.datastructure.stack;
+package datastructure.stack;
 
 /**
  * 循环队列实现
