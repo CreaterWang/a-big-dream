@@ -1,0 +1,13 @@
+1.字符串转换编码
+new String(str.getBytes(“ISO-8859-1″), “GBK”);
+2.Java中是如何支持正则表达式操作
+Java中的String类提供了支持正则表达式操作的方法，包括：matches()、replaceAll()、replaceFirst()、split()。此外，Java中可以用Pattern类表示正则表达式对象
+3.&和&&的区别
+&用法  (1)按位与 二进制位全部为1则为1的运算符；(2)逻辑与  判断左右两侧条件
+&&：短路与，左侧条件不成立不会判断右侧
+4.int和Integer区别
+ 	Integer a = new Integer(3);
+        Integer b = 3;                  // 将3自动装箱成Integer类型
+        int c = 3;
+        System.out.println(a == b);     // false 两个引用没有引用同一对象
+        System.out.println(a == c);     // true a自动拆箱成int类型再和c比较
