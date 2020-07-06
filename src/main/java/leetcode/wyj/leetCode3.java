@@ -25,10 +25,7 @@ package leetcode.wyj;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class leetCode3 {
 
@@ -106,6 +103,39 @@ public class leetCode3 {
                 j++;
                 maxLength = Math.max(j - i, maxLength);
             }
+        }
+        return maxLength;
+    }
+
+    public static void main(String[] args) {
+        lengthOfLongestSubstring4("pwwkew");
+    }
+    /**
+     * 用队列
+     */
+    public static int lengthOfLongestSubstring4(String s) {
+        int maxLength = 0;
+        Queue<Character> queue = new ArrayDeque();
+        Set<Character> set = new HashSet<>();
+        int i = 0;
+        while (i < s.length()) {
+            char c = s.charAt(i);
+            if (set.contains(c)) {
+                queue.add(c);
+                while (true) {
+                    set.remove(queue.peek());
+                    if(c == queue.poll()){
+                        break;
+                    }
+                }
+                set.add(c);
+
+            } else {
+                queue.add(c);
+                set.add(c);
+                maxLength = Math.max(queue.size(), maxLength);
+            }
+            i++;
         }
         return maxLength;
     }
