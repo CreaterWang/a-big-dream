@@ -1,3 +1,4 @@
+https://www.nowcoder.com/tutorial/94/ae05554a3ad84e42b6f9fc4d52859dc4
 1.字符串转换编码
 new String(str.getBytes(“ISO-8859-1″), “GBK”);
 2.Java中是如何支持正则表达式操作
