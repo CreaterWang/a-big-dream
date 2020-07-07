@@ -11,3 +11,7 @@ https://www.nowcoder.com/ta/huawei
 5.最大回文串
     左右对比移位,中心点0->length-1   长度奇偶性 提取公用方法  参数 left  right  奇数-left=right  偶数-left+1=right   然后left--,right++  返回最大字符串长度len  start:(len-1)/2+i end:len/2+1+i
     备注:right left方法出口注意看 left跟right最后位置 应该时字符串时不同的  所以最后长度  right-left-1;
+6.存放Z型字符串
+    根据行数 来new 字符串数组  每行一个字符串  根据row 来控制数组的row-- 或者row++
+7.整型反转
+     循环体结构 (temp = temp*10+x%10  x= x/10 ) 判断 数字 最大最小边界 判断好就可以
