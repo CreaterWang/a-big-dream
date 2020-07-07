@@ -36,16 +36,43 @@ public class LeetCode4 {
         int[] nums1 = {1,2};
         int[] nums2 = {-1,5};
         System.out.println(findMedianSortedArrays(nums1,nums2));
-
+    }
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {int len1 = nums1.length;
+        int len2 = nums2.length;
+        if (len1>len2){
+            return findMedianSortedArrays(nums2,nums1);
+        }
+        int left = 0;
+        int right = len1;
+        int middle = (len1+len2+1)/2;
+        while (left < right){
+            int i = (left+right+1)/2;
+            int j = middle-i;
+            if (nums1[i-1]>nums2[j]){
+                right = j-1;
+            }else{
+                left = i;
+            }
+        }
+        right = middle-left;
+        int num1Max = left==0?Integer.MIN_VALUE:nums1[left-1];
+        int num2Max = right==0?Integer.MIN_VALUE:nums2[right-1];
+        int num1Min = left==len1?Integer.MAX_VALUE:nums1[left];
+        int num2Min = right==len2?Integer.MAX_VALUE:nums2[right];
+        if ((len1+len2)%2==1){
+            return Math.max(num1Max,num2Max);
+        }else {
+            return (double)(Math.max(num1Max,num2Max)+Math.min(num1Min,num2Min))/2.0;
+        }
     }
     /**
      * @Description 求两个数组的中位数
      * @Author dongzeqi
      * @Date 2020/7/6 21:26
      */
-    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+    public static double findMedianSortedArrays2(int[] nums1, int[] nums2) {
         if (nums1.length > nums2.length) {
-            return findMedianSortedArrays(nums2,nums1);//保持数组1长度短 ,来确定遍历一定可以达到目的
+            return findMedianSortedArrays2(nums2,nums1);//保持数组1长度短 ,来确定遍历一定可以达到目的
         }
         int left = 0;
         int right = nums1.length;
