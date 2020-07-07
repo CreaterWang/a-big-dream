@@ -1,3 +1,13 @@
+https://leetcode-cn.com/problemset/algorithms/
+https://www.nowcoder.com/ta/huawei
 1.map获取key就是快
 2.链表 只要掌握  指针next指向哪里就可以
 3.最大公约数   更相减损法  辗转相除法
+#三个算法
+4.两有序数组整合查中位数  (1)整合数组再查询    (2)直接从第一个元素对比最小值 哪个小扔那个,扔到一半
+    (3)去长度较小的数组 整合折半查询  两个数组从一半开始对比,来锁定下次查询范围,难在出口,
+     出口(左侧最大元素>右侧最小元素 时 移动右侧指针,范围为left->i-1;反之移动左侧指针,范围为i->right)
+     备注小心数组越界判断好奇数时左测多一个就可以;
+5.最大回文串
+    左右对比移位,中心点0->length-1   长度奇偶性 提取公用方法  参数 left  right  奇数-left=right  偶数-left+1=right   然后left--,right++  返回最大字符串长度len  start:(len-1)/2+i end:len/2+1+i
+    备注:right left方法出口注意看 left跟right最后位置 应该时字符串时不同的  所以最后长度  right-left-1;
