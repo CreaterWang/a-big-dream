@@ -1,9 +1,7 @@
 package leetcode.dzq;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @Description: 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
@@ -47,7 +45,7 @@ public class LeetCode6 {
 
     public static void main(String[] args) {
         try {
-            System.out.println(convert("ABCD",3));;
+            System.out.println(convert1("PAYPALISHIRING",4));;
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -82,6 +80,24 @@ public class LeetCode6 {
         }
         for (StringBuffer rowSb :rowList) {
             sb.append(rowSb);
+        }
+        return sb.toString();
+    }
+
+    public static String convert1(String s, int numRows) {
+        if (numRows < 2) {
+            return s;
+        }
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < numRows; i++) {
+            int index = i;
+            while (index < s.length()) {
+                sb.append(s.charAt(index));
+                if (i != 0 && i != numRows-1 && (index+2*numRows-2*i-2 < s.length())) {
+                    sb.append(s.charAt(index+2*numRows-2*i-2));
+                }
+                index += (numRows-1)*2;
+            }
         }
         return sb.toString();
     }
