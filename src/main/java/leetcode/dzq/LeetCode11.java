@@ -31,7 +31,7 @@ public class LeetCode11 {
         }
     }
     /**
-     * @Description 两数之和hash
+     * @Description 最大柱形面积
      * @Author dongzeqi
      * @Date 2020/7/5 20:19
      */

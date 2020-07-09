@@ -147,3 +147,6 @@
     pom中加入了spring-boot-starter-data-jpa,Springboot会构造一个JpaTransactionManager这个事务管理器。
     pom中加入了spring-boot-starter-jdbc,Springboot会构造一个DataSourceTransactionManager这个事务管理器。
     都使用了Spring提供的PlatformTransactionManager接口  接口中策略HibernateTransactionManager,DataSourceTransactionManager,JtaTransactionManager,JpaTransactionManager
+
+
+
