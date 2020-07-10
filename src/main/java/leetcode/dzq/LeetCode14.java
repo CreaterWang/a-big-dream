@@ -19,12 +19,12 @@ package leetcode.dzq;
  * 所有输入只包含小写字母 a-z 。
  * @ProjectName: a-big-dream
  * @Package: leetcode.dzq
- * @ClassName: leetCode14
+ * @ClassName: LeetCode14
  * @Author: dongzeqi
  * @Date: 2020/7/10 21:44
  * @Version: 1.0
  */
-public class leetCode14 {
+public class LeetCode14 {
     public static void main(String[] args) {
         String[] strs = new String[]{"flower","flow","f"};
         System.out.println(longestCommonPrefix(strs));
