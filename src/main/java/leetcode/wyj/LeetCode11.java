@@ -35,6 +35,7 @@ public class LeetCode11 {
                 i++;
             }
         }
+
         return maxArea;
     }
 }
