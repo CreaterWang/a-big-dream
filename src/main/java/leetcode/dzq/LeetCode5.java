@@ -21,7 +21,7 @@ import java.util.Map;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @ProjectName: a-big-dream
  * @Package: leetcode.dzq
- * @ClassName: LeetCode1
+ * @ClassName: LeetCode5
  * @Author: dongzeqi
  * @Date: 2020/7/7 20:00
  * @Version: 1.0
@@ -30,11 +30,11 @@ public class LeetCode5 {
 
     public static void main(String[] args) {
         try {
-//            System.out.println(longestPalindrome("cbbd"));
-//            System.out.println(longestPalindrome("babad"));
-//            System.out.println(longestPalindrome("ac"));
+            System.out.println(longestPalindrome("cbbd"));
+            System.out.println(longestPalindrome("babad"));
+            System.out.println(longestPalindrome("ac"));
             System.out.println(longestPalindrome("bb"));
-//            System.out.println(longestPalindrome("abcda"));
+            System.out.println(longestPalindrome("abcda"));
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -47,8 +47,6 @@ public class LeetCode5 {
     public static String longestPalindrome(String s) {
         int max = 0;
         String maxStr = "";
-        int left = 0;
-        int right = 0;
         if (s.length()>1){
             maxStr = s.substring(0,1);
             max = 1;
