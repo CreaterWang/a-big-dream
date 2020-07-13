@@ -36,7 +36,7 @@ import java.util.List;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @ProjectName: a-big-dream
  * @Package: leetcode.dzq
- * @ClassName: LeetCode1
+ * @ClassName: LeetCode6
  * @Author: dongzeqi
  * @Date: 2020/7/7 22:33
  * @Version: 1.0
@@ -45,7 +45,7 @@ public class LeetCode6 {
 
     public static void main(String[] args) {
         try {
-            System.out.println(convert1("PAYPALISHIRING",4));;
+            System.out.println(convert("PAYPALISHIRING",4));;
         }catch (Exception e){
             e.printStackTrace();
         }

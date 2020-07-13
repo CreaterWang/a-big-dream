@@ -37,7 +37,8 @@ public class LeetCode4 {
         int[] nums2 = {-1,5};
         System.out.println(findMedianSortedArrays(nums1,nums2));
     }
-    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {int len1 = nums1.length;
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int len1 = nums1.length;
         int len2 = nums2.length;
         if (len1>len2){
             return findMedianSortedArrays(nums2,nums1);

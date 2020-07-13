@@ -26,15 +26,34 @@ package leetcode.dzq;
  */
 public class LeetCode14 {
     public static void main(String[] args) {
-        String[] strs = new String[]{"flower","flow","f"};
+        String[] strs = new String[]{"c","acc","ccc"};
         System.out.println(longestCommonPrefix(strs));
     }
+    
     /**
-     * @Description 最长公共前缀
+     * @Description 最长公共前缀  遍历比对 字符串递减法
      * @Author dongzeqi
      * @Date 2020/7/10 21:44
      */
     public static String longestCommonPrefix(String[] strs) {
+        if (strs.length == 0){
+            return "";
+        }
+        int index = strs[0].length();
+        for (int i = 1; i < strs.length; i++) {
+            while (strs[i].indexOf(strs[0]) != 0){
+                strs[0] = strs[0].substring(0,--index);
+            }
+        }
+        return strs[0];
+    }
+    
+    /**
+     * @Description 最长公共前缀  索引递加法
+     * @Author dongzeqi
+     * @Date 2020/7/10 21:44
+     */
+    public static String longestCommonPrefix1(String[] strs) {
         if (strs.length == 0){
             return "";
         }
@@ -53,11 +72,11 @@ public class LeetCode14 {
     }
 
     /**
-     * @Description 最长公共前缀
+     * @Description 最长公共前缀  公共前缀递加法
      * @Author dongzeqi
      * @Date 2020/7/10 21:44
      */
-    public static String longestCommonPrefix1(String[] strs) {
+    public static String longestCommonPrefix2(String[] strs) {
         StringBuffer result = new StringBuffer();
         if (strs.length>0){
             boolean flag = true;
