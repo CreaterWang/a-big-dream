@@ -1,26 +1,35 @@
 package leetcode.wyj;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class LeetCode14 {
     public static void main(String[] args) {
         String[] a = {"cc", "c"};
         System.out.println(longestCommonPrefix(a));
+        Set<LeetCode11> set = new HashSet<>();
+        set.add(new LeetCode11());
+        set.add(new LeetCode11());
+        System.out.println(set.size());
     }
+
     @Deprecated
     public static String longestCommonPrefix2(String[] strs) {
         //todo
         return "";
     }
+
     public static String longestCommonPrefix(String[] strs) {
-        if(strs.length==0){
+        if (strs.length == 0) {
             return "";
         }
-        if(strs.length==1){
+        if (strs.length == 1) {
             return strs[0];
         }
         int n = 0;
         StringBuffer sb = new StringBuffer("");
         while (true) {
-            if(strs[0].length()==0){
+            if (strs[0].length() == 0) {
                 return "";
             }
             char init;
