@@ -7,10 +7,7 @@ public class LeetCode14 {
     public static void main(String[] args) {
         String[] a = {"cc", "c"};
         System.out.println(longestCommonPrefix(a));
-        Set<LeetCode11> set = new HashSet<>();
-        set.add(new LeetCode11());
-        set.add(new LeetCode11());
-        System.out.println(set.size());
+
     }
 
     @Deprecated
