@@ -20,16 +20,17 @@ public class LeetCode16 {
             int start = i + 1;
             int end = nums.length - 1;
             while (start < end) {
-                int abs = Math.abs(target - nums[start] - nums[end] - nums[i]);
+                int sum = nums[start] + nums[end] + nums[i];
+                int abs = Math.abs(target - sum);
 
                 if (abs < resultX) {
                     resultX = abs;
-                    result = nums[start] + nums[end] + nums[i];
+                    result = sum;
                 }
 
-                if (target < nums[start] + nums[end] + nums[i]) {
+                if (target < sum) {
                     end--;
-                } else if (target > nums[start] + nums[end] + nums[i]) {
+                } else if (target > sum) {
                     start++;
                 } else {
                     return result;
