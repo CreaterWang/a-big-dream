@@ -35,13 +35,7 @@ public class LeetCode22 {
     }
 
     public static List<String> generateParenthesis(int n) {
-        List<String> list = new ArrayList<>();
-        if (n>0){
-            int left = 1;
-            int right =0;
-            list = addStr(list,"(",n,left,right);
-        }
-        return list;
+        return n>0?addStr(new ArrayList<>(),"(",n,1,0):new ArrayList<>();
     }
 
     public static List<String> addStr(List<String> list,String str,int n,int left,int right) {
