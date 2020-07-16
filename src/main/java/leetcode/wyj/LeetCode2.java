@@ -1,5 +1,7 @@
 package leetcode.wyj;
 
+import leetcode.model.ListNode;
+
 /**
  * 两数相加
  * <p>
