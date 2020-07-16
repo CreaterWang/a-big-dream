@@ -1,5 +1,7 @@
 package leetcode.wyj;
 
+import leetcode.model.ListNode;
+
 /**
  * 两数相加
  * <p>
@@ -16,14 +18,6 @@ package leetcode.wyj;
  * 链接：https://leetcode-cn.com/problems/add-two-numbers
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
 
 public class LeetCode2 {
 
