@@ -1,5 +1,7 @@
 package leetcode.wyj;
 
+import leetcode.model.ListNode;
+
 import java.util.HashMap;
 import java.util.Map;
 
