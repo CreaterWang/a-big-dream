@@ -40,11 +40,49 @@ package leetcode.dzq;
  */
 public class LeetCode29 {
     public static void main(String[] args) {
-        int dividend = Integer.MIN_VALUE;
-        int divisor = -1;
+        int dividend = 10;
+        int divisor = 3;
+//        int dividend = Integer.MIN_VALUE;
+//        int divisor = -1;
         System.out.println(divide(dividend,divisor));
     }
     public static int divide(int dividend, int divisor) {
+        if (dividend == 0){
+            return 0;
+        }
+        int flag = 1;
+        if (dividend > 0){
+            dividend = 0-dividend;
+            flag = 0-flag;
+        }
+        if (divisor > 0){
+            divisor = 0-divisor;
+            flag = 0-flag;
+        }
+        int i = div(dividend,divisor);
+        if (i == Integer.MIN_VALUE && flag == 1){
+            i = 0-Integer.MAX_VALUE;
+        }
+        return flag>0?(0-i):i;
+    }
+    public static int div(int dividend, int divisor){
+        if (divisor < dividend) {
+            return 0;
+        }
+        int temp = divisor;
+        int num = -1;
+        while (dividend<divisor){
+            if (dividend >> 1 < divisor){
+                divisor = divisor << 1;
+                num = num << 1;
+            }else {
+                return num + div(dividend-divisor,temp);
+            }
+        }
+        return num;
+    }
+
+    public static int divide1(int dividend, int divisor) {
         boolean sign = (dividend > 0) ^ (divisor > 0);
         int result = 0;
         if(dividend>0) {
@@ -73,7 +111,7 @@ public class LeetCode29 {
         return result;
     }
 
-    public static int divide1(int dividend, int divisor) {
+    public static int divide2(int dividend, int divisor) {
         if (dividend == 0){
             return 0;
         }
@@ -94,6 +132,6 @@ public class LeetCode29 {
         if (i == Integer.MIN_VALUE && flag == 1){
             i = 0-Integer.MAX_VALUE;
         }
-        return flag>0?(int)(0-i):(int)i;
+        return flag>0?(0-i):i;
     }
 }
