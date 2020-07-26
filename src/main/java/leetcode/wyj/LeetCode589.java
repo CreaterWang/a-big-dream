@@ -19,6 +19,10 @@ import java.util.Stack;
  * 链接：https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+
+/**
+ * 学习树先序遍历
+ */
 public class LeetCode589 {
     public static void main(String[] args) {
         List<Node> list1 = new ArrayList<>();
