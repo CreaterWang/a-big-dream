@@ -36,14 +36,32 @@ public class LeetCode36 {
                     rowSet.add(board[j][i]);
                 }
 
-                if (board[i - i % 3 + j / 3][(i%3)*3+j%3] != '.') {
-                    if (rowSet.contains(board[i - i % 3 + j / 3][(i%3)*3+j%3])) {
+                if (board[i - i % 3 + j / 3][j / 3] != '.') {
+                    if (rowSet.contains(board[j][i])) {
                         return false;
                     }
-                    childSet.add(board[i - i % 3 + j / 3][(i%3)*3+j%3]);
+                    childSet.add(board[j][i]);
                 }
             }
         }
+
+        for (int i = 0; i < 7; i += 3) {
+            for (int j = 0; j < 7; j += 3) {
+                //列
+                Set<Character> set = new HashSet<>();
+                for (int n = i; n < i + 3; n++) {
+                    for (int m = j; m < j + 3; m++) {
+                        if (board[m][n] != '.') {
+                            if (set.contains(board[m][n])) {
+                                return false;
+                            }
+                            set.add(board[m][n]);
+                        }
+                    }
+                }
+            }
+        }
+
 
         return true;
 
