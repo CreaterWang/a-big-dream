@@ -170,6 +170,7 @@ Serial收集器，parnew收集器，parallel scavenge收集器等
 -Xnoclassgc
 
 表示关闭JVM对类的垃圾回收
+
 -XX:+TraceClassLoading
 
 表示查看类的加载信息
