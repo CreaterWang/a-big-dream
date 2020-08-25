@@ -15,6 +15,6 @@ public class FilterDemo {
                 .filter(u -> u.getAge() > 18 && u.getSex() == 0)
                 .collect(Collectors.toList());
         //打印
-        collect.stream().forEach(u -> System.out.println(u.getName()));
+        collect.forEach(u -> System.out.println(u.getName()));
     }
 }
